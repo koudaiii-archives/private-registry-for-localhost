@@ -1,0 +1,12 @@
+version: '2'
+services:
+  registry:
+    image: registry:2
+    ports:
+      - 5000:5000
+    environment:
+      - "REGISTRY_STORAGE=<%= ENV['REGISTRY_STORAGE'] %>"
+      - "REGISTRY_STORAGE_S3_ACCESSKEY=<%= ENV['REGISTRY_STORAGE_S3_ACCESSKEY'] %>"
+      - "REGISTRY_STORAGE_S3_SECRETKEY=<%= ENV['REGISTRY_STORAGE_S3_SECRETKEY'] %>"
+      - "REGISTRY_STORAGE_S3_REGION=<%= ENV['REGISTRY_STORAGE_S3_REGION'] %>"
+      - "REGISTRY_STORAGE_S3_BUCKET=<%= ENV['REGISTRY_STORAGE_S3_BUCKET'] %>"
