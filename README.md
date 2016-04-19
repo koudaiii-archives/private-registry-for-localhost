@@ -1,4 +1,4 @@
-## private-registry
+## Docker private-registry for localhost
 
 ### Usage
 
