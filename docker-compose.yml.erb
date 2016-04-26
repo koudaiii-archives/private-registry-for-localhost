@@ -10,3 +10,12 @@ services:
       - "REGISTRY_STORAGE_S3_SECRETKEY=<%= ENV['REGISTRY_STORAGE_S3_SECRETKEY'] %>"
       - "REGISTRY_STORAGE_S3_REGION=<%= ENV['REGISTRY_STORAGE_S3_REGION'] %>"
       - "REGISTRY_STORAGE_S3_BUCKET=<%= ENV['REGISTRY_STORAGE_S3_BUCKET'] %>"
+  nginx:
+    build: .
+    ports:
+      - 8080:80
+      - 8000:8000
+    environment:
+      - "PRIVATE_REGISTRY_HOST=<%= ENV['PRIVATE_REGISTRY_HOST'] %>"
+      - "ALLOW_IP=<%= ENV['ALLOW_IP'] %>"
+      - "ALLOW_SUBNET=<%= ENV['ALLOW_SUBNET'] %>"
