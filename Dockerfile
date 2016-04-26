@@ -10,5 +10,8 @@ COPY files/status.html /var/www/nginx-default/
 COPY files/run.sh /run.sh
 
 RUN rm -f /etc/nginx/conf.d/default.conf
+RUN apt-get update && \
+    apt-get install -y curl && \
+    rm -rf /var/lib/apt/lists/*
 
 CMD ["./run.sh"]
