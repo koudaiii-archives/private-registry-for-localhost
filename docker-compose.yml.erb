@@ -13,7 +13,7 @@ services:
   nginx:
     build: .
     ports:
-      - 8080:80
+      - 5443:443
       - 8000:8000
     environment:
       - "PRIVATE_REGISTRY_HOST=<%= ENV['PRIVATE_REGISTRY_HOST'] %>"
