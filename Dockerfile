@@ -6,6 +6,8 @@ RUN mkdir -p /var/www/nginx-default
 COPY files/nginx-docker.conf /etc/nginx/conf.d/
 COPY files/http_gzip_static.conf /etc/nginx/conf.d/
 COPY files/nginx.conf /etc/nginx/
+COPY files/domain.crt /etc/nginx/conf.d/
+COPY files/domain.key /etc/nginx/conf.d/
 COPY files/status.html /var/www/nginx-default/
 COPY files/run.sh /run.sh
 
