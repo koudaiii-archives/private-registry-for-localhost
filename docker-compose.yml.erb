@@ -20,3 +20,5 @@ services:
       - "ALLOW_IP=<%= ENV['ALLOW_IP'] %>"
       - "ALLOW_SUBNET=<%= ENV['ALLOW_SUBNET'] %>"
       - "SERVER_NAME=<%= ENV['SERVER_NAME'] %>"
+    links:
+      - registry
