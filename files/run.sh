@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 host=${PRIVATE_REGISTRY_HOST}
 ip=${ALLOW_IP}
